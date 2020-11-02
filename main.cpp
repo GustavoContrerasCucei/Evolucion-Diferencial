@@ -42,7 +42,7 @@ int generarRandom()
 
 double Griewank(double x,double y)
 {
-    
+    return (((x*x)/4000) + ((y*y)/4000)) - (cos(x/(sqrt(1)))* cos(y/(sqrt(2)))) + 1;
 }
 
 double Rastrigin(double x,double y)
