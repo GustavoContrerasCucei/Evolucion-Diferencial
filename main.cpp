@@ -106,6 +106,11 @@ void Evolucion_Diferencial_Griewank()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Griewank " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Griewank(vector_x[0],vector_y[0]));
 }
 
 
@@ -160,6 +165,11 @@ void Evolucion_Diferencial_Rastrigin()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Rastrigin " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Rastrigin(vector_x[0],vector_y[0]));
 
 }
 
@@ -214,6 +224,11 @@ void Evolucion_Diferencial_Sphere()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Sphere " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Sphere(vector_x[0],vector_y[0]));
 
 }
 
