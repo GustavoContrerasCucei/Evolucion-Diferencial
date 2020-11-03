@@ -1,13 +1,12 @@
 ///_____________________________________///
 ///|                                   |///
-///|       Evolución Diferencial       |///
+///|       EvoluciÃ³n Diferencial       |///
 ///|___________________________________|///
 
 #include <iostream>
 #include <math.h>
 #include <cstdio>
 #include <cstdlib>
-#include <time.h>
 
 using namespace std;
 
@@ -24,7 +23,10 @@ double Rand(void)
     return (rand()/(double)RAND_MAX);
 }
 
-bool validarRandom(int pos, int r1, int r2, int r3)
+bool validarRandom(int pos,
+                   int r1,
+                   int r2,
+                   int r3)
 {
     if(pos != r1 and pos != r2 and pos != r3 and r1 != r2 and r1 != r3 and r2 != r3)
     {
@@ -40,17 +42,17 @@ int generarRandom()
 
 double Griewank(double x,double y)
 {
-    
+    return (((x*x)/4000) + ((y*y)/4000)) - (cos(x/(sqrt(1)))* cos(y/(sqrt(2)))) + 1;
 }
 
 double Rastrigin(double x,double y)
 {
-    
+    return 10*2 + ((x*x) - 10*cos(2*pi*x)) + ((y*y) - 10*cos(2*pi*y));
 }
 
 double Sphere(double x,double y)
 {
-    
+    return (x*x) + (y*y);
 }
 
 void Evolucion_Diferencial_Griewank()
@@ -104,6 +106,11 @@ void Evolucion_Diferencial_Griewank()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Griewank " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Griewank(vector_x[0],vector_y[0]));
 }
 
 
@@ -158,6 +165,11 @@ void Evolucion_Diferencial_Rastrigin()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Rastrigin " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Rastrigin(vector_x[0],vector_y[0]));
 
 }
 
@@ -212,11 +224,15 @@ void Evolucion_Diferencial_Sphere()
             }
         }
     }
+    cout << endl << endl;
+    cout << " Sphere " << endl;
+    printf(" x = %.15f",vector_x[0]);
+    printf(" y = %.15f",vector_y[0]);
+    printf(" f = %.15f\n",Sphere(vector_x[0],vector_y[0]));
 
 }
 
 int main()
 {
-    srand (time(NULL));
     return 0;
 }
