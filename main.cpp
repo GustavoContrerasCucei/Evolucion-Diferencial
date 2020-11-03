@@ -47,7 +47,7 @@ double Griewank(double x,double y)
 
 double Rastrigin(double x,double y)
 {
-    
+    return 10*2 + ((x*x) - 10*cos(2*pi*x)) + ((y*y) - 10*cos(2*pi*y));
 }
 
 double Sphere(double x,double y)
